@@ -78,10 +78,6 @@ git clone https://github.com/your-username/json-tree-viewer.git
 
 ---
 
-## 📜 License
-
-This project is open-source and free to use under the MIT License.
-
 ## 🌈 Color Legend for JSON Value Types
 
 Each value in the tree is displayed with a distinct color based on its type:
