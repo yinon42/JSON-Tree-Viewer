@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSaveJson"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp">
+
+                <EditText
+                    android:id="@+id/url_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter JSON URL"
+                    android:padding="12dp"
+                    android:drawableStart="@drawable/ic_link"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/load_url_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load from URL"
+                app:icon="@drawable/ic_download"
+                app:iconPadding="8dp"
+                app:iconGravity="textStart"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:padding="12dp"
+                android:layout_margin="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp">
+
+                <EditText
+                    android:id="@+id/json_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Paste your JSON here"
+                    android:gravity="top"
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp" />
+            </androidx.cardview.widget.CardView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:rowOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/load_json_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Load JSON"
+                    app:icon="@drawable/ic_code"
+                    app:iconPadding="8dp"
+                    app:iconGravity="textStart"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:padding="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnImportFile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Import JSON File"
+                    app:icon="@drawable/ic_folder"
+                    app:iconPadding="8dp"
+                    app:iconGravity="textStart"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:padding="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCopyJson"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Copy JSON"
+                    app:icon="@drawable/ic_copy"
+                    app:iconPadding="8dp"
+                    app:iconGravity="textStart"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:padding="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Share JSON"
+                    app:icon="@drawable/ic_share"
+                    app:iconPadding="8dp"
+                    app:iconGravity="textStart"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:padding="12dp" />
+            </GridLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrevMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⬇️ Prev"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNextMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⬆️ Next"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnExpandAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expand All"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCollapseAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Collapse All"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <com.example.jsontreeview.JsonViewerView
+                android:id="@+id/json_viewer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveJson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save JSON"
+        app:icon="@drawable/ic_save"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        app:cornerRadius="12dp" />
+</RelativeLayout>
