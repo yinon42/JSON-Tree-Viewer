@@ -72,12 +72,6 @@ git clone https://github.com/your-username/json-tree-viewer.git
 
 ---
 
-## 📸 Screenshots
-
-![image](https://github.com/user-attachments/assets/0a4d8ec4-7f73-4e40-8a28-37e8d79fa55d)
-
----
-
 ## 🌈 Color Legend for JSON Value Types
 
 Each value in the tree is displayed with a distinct color based on its type:
@@ -89,3 +83,9 @@ Each value in the tree is displayed with a distinct color based on its type:
 | Boolean   | true, false        | #F57C00    | Orange for booleans   |
 | Null      | null               | Gray       | Gray for null values  |
 | Object/Array | {...}, [...]    | Black      | Default text color    |
+
+---
+
+## 📸 Screenshots
+
+![image](https://github.com/user-attachments/assets/0a4d8ec4-7f73-4e40-8a28-37e8d79fa55d)
