@@ -66,24 +66,6 @@ git clone https://github.com/your-username/json-tree-viewer.git
 
 ---
 
-## 📁 Folder Structure
-
-```
-├── com.example.jsontreeview
-│   ├── JsonViewerView.java        # Main JSON Viewer component
-│   ├── JsonNode.java              # Data model
-│   ├── JsonNodeAdapter.java       # RecyclerView Adapter
-│   ├── JsonParserUtil.java        # JSON <-> Node conversion
-│   └── TreeItemDecoration.java    # Optional item decoration
-├── res/
-│   ├── layout/
-│   ├── drawable/
-│   └── values/
-└── MainActivity.java              # Demo usage
-```
-
----
-
 ## 📸 Screenshots
 
 > Coming soon…
@@ -93,3 +75,15 @@ git clone https://github.com/your-username/json-tree-viewer.git
 ## 📜 License
 
 This project is open-source and free to use under the MIT License.
+
+## 🌈 Color Legend for JSON Value Types
+
+Each value in the tree is displayed with a distinct color based on its type:
+
+| Type      | Example            | Color Code | Description           |
+|-----------|--------------------|------------|-----------------------|
+| String    | "Hello world"      | #1976D2    | Blue for strings      |
+| Number    | 42, 3.14           | #388E3C    | Green for numbers     |
+| Boolean   | true, false        | #F57C00    | Orange for booleans   |
+| Null      | null               | Gray       | Gray for null values  |
+| Object/Array | {...}, [...]    | Black      | Default text color    |
