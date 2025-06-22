@@ -4,6 +4,11 @@ An interactive, customizable JSON viewer for Android. Displays JSON data as an e
 
 ---
 
+## Link to app demo video
+https://drive.google.com/file/d/1WwXc_uNJkD5ZLNCZ0u-15tyrIQTZr7Ea/view?usp=drive_link
+
+## Link to full project zip file
+
 ## ✨ Features
 
 - ✅ **Tree View Display**  
