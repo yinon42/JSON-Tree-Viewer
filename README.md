@@ -72,6 +72,32 @@ git clone https://github.com/your-username/json-tree-viewer.git
 
 ---
 
+## 📦 Installation via JitPack
+
+### 1. Add the JitPack repository
+
+In your `settings.gradle.kts` (root level):
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+    }
+}
+```
+
+### 2. Add the dependency
+
+In your `build.gradle.kts` (module level):
+```kotlin
+dependencies {
+    implementation("com.github.yinon42:jsontreeview:1.0.0")
+}
+```
+
+---
+
 ## 🌈 Color Legend for JSON Value Types
 
 Each value in the tree is displayed with a distinct color based on its type:
